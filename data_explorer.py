@@ -4,7 +4,7 @@ import pandas as pd
 
 @st.cache_resource
 def get_connection():
-    return duckdb.connect(database='patents.duckdb', read_only=True)
+    return duckdb.connect(database='uspto.duckdb', read_only=True)
 
 conn = get_connection()
 
