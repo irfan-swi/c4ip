@@ -29,7 +29,7 @@ if table_name:
         selected_columns = st.multiselect('Select columns', columns['name'])
 
 # Button to show data
-if st.button('Show 10 random rows'):
+if st.button('Show 10 sample rows'):
     if table_name and selected_columns:
         query_data = f"SELECT {', '.join(selected_columns)} FROM {table_name} ORDER BY RANDOM() LIMIT 10"
         data = pd.read_sql(query_data, conn)
